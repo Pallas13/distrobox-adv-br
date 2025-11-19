@@ -3,13 +3,13 @@
 
 # Variáveis
 URL_LACUNA="https://get.webpkiplugin.com/Downloads/2.13.3/setup-deb-64"
-ARQUIVO_DOWNLOAD="${HOME}/Downloads/setup-deb-64"
-ARQUIVO_DEB="${HOME}/Downloads/setup-deb-64.deb"
+ARQUIVO_DOWNLOAD="/tmp/setup-deb-64"
+ARQUIVO_DEB="/tmp/setup-deb-64.deb"
 # SHA256 do arquivo DEB
 CHECKSUM_LACUNA="8b43c49f07d720480afb90f35a2f159abe916c8ec161e9a64f301e9aebfe9949"
 
 echo "Baixando Lacuna Web PKI..."
-wget -P "${HOME}/Downloads" "${URL_LACUNA}"
+wget -P "/tmp/" "${URL_LACUNA}"
 
 echo "Renomeando arquivo..."
 mv "${ARQUIVO_DOWNLOAD}" "${ARQUIVO_DEB}"

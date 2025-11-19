@@ -3,13 +3,13 @@
 
 # Variáveis
 URL_SAFESIGN="https://assets.ctfassets.net/zuadwp3l2xby/2loCJpZkGMJe5y06gwzM4C/a065ab00cd0c42ca04de8870dce3de06/SafeSign_IC_Standard_Linux_ub2404_4.2.1.0-AET.000.zip"
-ARQUIVO_ZIP="${HOME}/Downloads/SafeSign_IC_Standard_Linux_ub2404_4.2.1.0-AET.000.zip"
-ARQUIVO_DEB="${HOME}/Downloads/SafeSign IC Standard Linux 4.2.1.0-AET.000 ub2404 x86_64.deb"
+ARQUIVO_ZIP="/tmp/SafeSign_IC_Standard_Linux_ub2404_4.2.1.0-AET.000.zip"
+ARQUIVO_DEB="/tmp/SafeSign IC Standard Linux 4.2.1.0-AET.000 ub2404 x86_64.deb"
 # SHA256 do arquivo zip
 CHECKSUM_SAFESIGN="3cf3e94ca8dddefe4e192c2a84a14cbdfd0789271d02d7d323da0b48ecdb8ac7"
 
 echo "Baixando SafeSign IC Standard..."
-wget -P "${HOME}/Downloads" "${URL_SAFESIGN}"
+wget -P "/tmp/" "${URL_SAFESIGN}"
 
 # Verificação de Checksum
 echo "Verificando checksum do SafeSign..."
@@ -20,7 +20,7 @@ fi
 echo "Checksum verificado com sucesso."
 
 echo "Descompactando SafeSign..."
-unzip "${ARQUIVO_ZIP}" -d "${HOME}/Downloads"
+unzip "${ARQUIVO_ZIP}" -d "/tmp/"
 
 echo "Instalando SafeSign..."
 apt install -y "${ARQUIVO_DEB}"

@@ -3,14 +3,14 @@
 
 # Variáveis
 URL_SAFENET="https://www.digicert.com/StaticFiles/Linux_SAC_10.9_GA.zip"
-ARQUIVO_ZIP="${HOME}/Downloads/Linux_SAC_10.9_GA.zip"
-DIRETORIO_EXTRAIDO="${HOME}/Downloads/SAC_10.9 GA"
+ARQUIVO_ZIP="/tmp/Linux_SAC_10.9_GA.zip"
+DIRETORIO_EXTRAIDO="/tmp/Downloads/SAC_10.9 GA"
 ARQUIVO_DEB="${DIRETORIO_EXTRAIDO}/Installation/withoutUI/Ubuntu-2204/safenetauthenticationclient-core_10.9.4723_amd64.deb"
 # SHA256 do arquivo zip
 CHECKSUM_SAFENET="46759cfe91d736af18a49d10e4749f264022db44e04ed4caf94e1ca77d6a013e"
 
 echo "Baixando SafeNet Authentication Client..."
-wget -P "${HOME}/Downloads" "${URL_SAFENET}"
+wget -P "/tmp/" "${URL_SAFENET}"
 
 # Verificação de Checksum
 echo "Verificando checksum do SafeNet..."
@@ -21,7 +21,7 @@ fi
 echo "Checksum verificado com sucesso."
 
 echo "Descompactando SafeNet..."
-unzip "${ARQUIVO_ZIP}" -d "${HOME}/Downloads"
+unzip "${ARQUIVO_ZIP}" -d "/tmp/"
 
 echo "Instalando SafeNet..."
 apt install -y "${ARQUIVO_DEB}"

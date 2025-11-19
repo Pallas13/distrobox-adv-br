@@ -3,13 +3,13 @@
 
 # Variáveis
 URL_WEBSIGNER="https://websigner.softplan.com.br/Downloads/2.12.1/webpki-chrome-64-deb"
-ARQUIVO_DOWNLOAD="${HOME}/Downloads/webpki-chrome-64-deb"
-ARQUIVO_DEB="${HOME}/Downloads/webpki-chrome-64-deb.deb"
+ARQUIVO_DOWNLOAD="/tmp/webpki-chrome-64-deb"
+ARQUIVO_DEB="/tmp/webpki-chrome-64-deb.deb"
 # SHA256 do arquivo DEB
 CHECKSUM_WEBSIGNER="5da8fd36f1371f52bbaebede75fade1928f09cff2dd605b8da5663c6da505379"
 
 echo "Baixando Softplan WebSigner..."
-wget -P "${HOME}/Downloads" "${URL_WEBSIGNER}"
+wget -P "/tmp/" "${URL_WEBSIGNER}"
 
 echo "Renomeando arquivo..."
 mv "${ARQUIVO_DOWNLOAD}" "${ARQUIVO_DEB}"

@@ -3,13 +3,13 @@
 
 # Variáveis
 URL_LACUNA="https://get.websignerplugin.com/Downloads/2.17.7/setup-deb-64"
-ARQUIVO_DOWNLOAD="${HOME}/Downloads/setup-deb-64"
-ARQUIVO_DEB="${HOME}/Downloads/setup-deb-64.deb"
+ARQUIVO_DOWNLOAD="/tmp/setup-deb-64"
+ARQUIVO_DEB="/tmp/setup-deb-64.deb"
 # SHA256 do arquivo DEB
 CHECKSUM_LACUNA="04981f073f61ac7e8662ec12f3d69be1cb8090131836935a111ef9d5b012abfb"
 
 echo "Baixando Certisign WebSigner..."
-wget -P "${HOME}/Downloads" "${URL_LACUNA}"
+wget -P "/tmp/" "${URL_LACUNA}"
 
 echo "Renomeando arquivo..."
 mv "${ARQUIVO_DOWNLOAD}" "${ARQUIVO_DEB}"

@@ -14,7 +14,7 @@ DESKTOP_FILE="usr/share/applications/serproid.desktop"
 
 # Diretório de Trabalho (onde o script será executado e onde os DEBs ficarão)
 # O script irá se mover para este diretório.
-DOWNLOAD_DIR="$HOME/Downloads"
+DOWNLOAD_DIR="/tmp/"
 # Diretório onde o pacote será descompactado
 WORK_DIR="$DOWNLOAD_DIR/serproid-desktop-work"
 
