@@ -4,7 +4,7 @@
 # Variáveis
 URL_SAFENET="https://www.digicert.com/StaticFiles/Linux_SAC_10.9_GA.zip"
 ARQUIVO_ZIP="/tmp/Linux_SAC_10.9_GA.zip"
-DIRETORIO_EXTRAIDO="/tmp/Downloads/SAC_10.9 GA"
+DIRETORIO_EXTRAIDO="/tmp/SAC_10.9 GA"
 ARQUIVO_DEB="${DIRETORIO_EXTRAIDO}/Installation/withoutUI/Ubuntu-2204/safenetauthenticationclient-core_10.9.4723_amd64.deb"
 # SHA256 do arquivo zip
 CHECKSUM_SAFENET="46759cfe91d736af18a49d10e4749f264022db44e04ed4caf94e1ca77d6a013e"
