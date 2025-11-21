@@ -11,8 +11,12 @@ NOME_SAFENET="SafeNet"
 
 # --- Passo 1: Criar um novo perfil do Firefox pela linha de comando ---
 echo "Iniciando o Firefox em modo headless para criar um novo perfil (default-release)..."
-firefox -CreateProfile default-release --headless --screenshot /dev/null
+firefox -CreateProfile default-release --headless --screenshot /dev/null &
+# Espera por 6 segundos para o Firefox criar os arquivos do perfil
+sleep 6
 
+# Mata todos os processos do Firefox para garantir que o navegador esteja fechado
+sudo pkill -f firefox
 # --- Passo 2: Encontrar o diretório do perfil recém-criado ---
 # Procura por perfis que terminam com "default-release"
 CAMINHO_DO_PERFIL=$(find ~/.mozilla/firefox -maxdepth 1 -type d -name "*.default-release")
